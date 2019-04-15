@@ -672,6 +672,12 @@ esac
 #    Y2_UI_ARGS=--nothreads
 #fi
 
+# enable the libyui REST API
+# FIXME: the real UI is determined by libyui itself later
+if [ -n "$YUI_HTTP_PORT" ]; then
+    Y2_MODE="ui"
+fi
+
 #=============================================
 # 8) Call YaST2
 #---------------------------------------------
